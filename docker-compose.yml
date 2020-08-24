@@ -18,12 +18,9 @@ services:
       - "9229:9229"
     volumes:
       - ./backend:/app
+    environment: 
+      NODE_ENV: 'docker'
     command: "npm run start:docker"
-    environment:
-      DB_SCHEMA: bayer
-      DB_USER: postgres
-      DB_PASSWORD: postgres
-      DB_HOST: tc-database
     depends_on:
       - tc-database
 

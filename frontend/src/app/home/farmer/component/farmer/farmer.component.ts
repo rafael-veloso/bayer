@@ -8,7 +8,6 @@ import { Farmer } from 'src/app/shared/farmer-search/model/Farmer';
 export class FarmerComponent {
 
   onFarmerSelected(farmer: Farmer) {
-    console.log('ok');
     console.log(farmer);
   }
 
