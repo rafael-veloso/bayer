@@ -1,0 +1,11 @@
+<ng-container *ngIf="farmers != null && farmers.length > 0; else notFoundMsg">
+  <h1 mat-dialog-title>Select a farmer</h1>
+  <div mat-dialog-content>
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let farmer of farmers" (click)="select(farmer)">{{farmer.name}}</a>
+    </mat-nav-list>
+  </div>
+</ng-container>
+<ng-template #notFoundMsg>
+  <h3>No farmers found</h3>
+</ng-template>

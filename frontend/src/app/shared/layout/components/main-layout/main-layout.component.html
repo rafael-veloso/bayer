@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle();">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Technical Challenge</span>
+  <span class="spacer"></span>
+  <a mat-icon-button routerLink="/home">
+    <mat-icon>home</mat-icon>
+  </a>
+  <a mat-button href="https://github.com/rafael-veloso/tech_challenge" target="_blank">
+    <img src="/assets/images/github-circle-white.svg" /> GitHub
+  </a>
+</mat-toolbar>
+
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" opened [fixedInViewport]="mobileQuery.matches">
+    <mat-nav-list (click)="sidenav.mode === 'over' && sidenav.close();">
+      <a mat-list-item routerLink="/home">Introduction</a>
+      <a mat-list-item routerLink="/farmer">Farmer search</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

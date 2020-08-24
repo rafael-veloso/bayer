@@ -1,0 +1,12 @@
+:host {
+  margin: 10px;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    mat-form-field {
+      flex: 1 1 250px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+}

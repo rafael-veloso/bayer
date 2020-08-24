@@ -1,0 +1,48 @@
+:host {
+
+  > mat-toolbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    &:first-child {
+      top: 0;
+    }
+    &:last-child {
+      bottom: 0;
+    }
+  }
+
+  > mat-sidenav-container {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    > mat-sidenav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      mat-nav-list {
+        padding: 0;
+      }
+    }
+
+    mat-sidenav-content {
+      padding: 15px;
+    }
+
+  }
+
+  @media (max-width: 599px) {
+    > mat-sidenav-container {
+      top: 56px;
+    }
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+}
