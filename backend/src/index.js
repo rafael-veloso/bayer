@@ -16,7 +16,7 @@ app.use('/farmers', farmRoute);
 
 // when a random route is inputed
 app.get('*', (req, res) => {
-   res.status(200).send({ message: 'Welcome to Bayer API.' })
+   res.status(200).send({ message: 'Welcome to the Technical Challenge services.' })
 });
 
 app.listen(port, () => {
