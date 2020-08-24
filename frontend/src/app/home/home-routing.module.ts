@@ -10,6 +10,7 @@ const routes: Routes = [
     path: '',
     component: MainLayoutComponent,
     children: [
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: 'home', component: InitialComponent},
       {path: 'farmer', component: FarmerComponent}
     ]

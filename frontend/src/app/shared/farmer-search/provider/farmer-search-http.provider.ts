@@ -3,11 +3,12 @@ import { HttpClient } from '@angular/common/http';
 
 import { Farmer } from '../model/Farmer';
 import { FarmerSearchAbstractProvider, SearchParams } from './farmer-search-abstract.provider';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class FarmerSearchHttpProvider implements FarmerSearchAbstractProvider {
 
-  private readonly apiContext = 'http://localhost:8080/farmers';
+  private readonly apiContext = `${environment}/farmers`;
 
   constructor(private http: HttpClient) {}
 
