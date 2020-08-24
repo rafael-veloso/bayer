@@ -47,6 +47,7 @@ docker-compose down
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-After the containers are started you can access the [Frontend](http://localhost:4200) local URL from your Browser.
+After the containers are started you will see this line at your terminal from the frontend container: "Compiled successfully.",
 
-You can access directly the [Backend](http://localhost:8080) as well.
+then you can access the [Frontend](http://localhost:4200) local URL from your Browser.
+You can access directly the [Backend](http://localhost:8080) as well if you want to test just the services.

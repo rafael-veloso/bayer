@@ -9,7 +9,7 @@ class FarmerService {
     try {
       return await db.Farmer.findAll({
         where: {
-          [Op.or]: [{name: {[Op.iLike]: `%${nameOrDocument}%`}}, {document: {[Op.like]: `%${nameOrDocument}%`}}]
+          [Op.or]: [{name: {[Op.iLike]: `${nameOrDocument}%`}}, {document: {[Op.like]: `${nameOrDocument}%`}}]
         }
       });
     } catch (error) {
