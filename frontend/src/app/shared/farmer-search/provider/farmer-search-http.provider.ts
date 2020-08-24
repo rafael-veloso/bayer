@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 export class FarmerSearchHttpProvider implements FarmerSearchAbstractProvider {
 
-  private readonly apiContext = `${environment}/farmers`;
+  private readonly apiContext = `${environment.endpoint}/farmers`;
 
   constructor(private http: HttpClient) {}
 
