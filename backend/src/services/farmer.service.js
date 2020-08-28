@@ -1,8 +1,7 @@
 'use strict';
 
 const models = require('../models');
-const Sequelize = require('Sequelize');
-const Op = Sequelize.Op;
+const Op = models.Sequelize.Op;
 
 class FarmerService {
 
