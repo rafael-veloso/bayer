@@ -14,11 +14,11 @@ This is an example application using Angular 7, Material, NodeJs, Express and Po
 
 When the containers are running you will be able to see the views shown below.
 
-
+<br/>
 <img src="docs/screenshot1.png" width="50%" alt="Home view">
-
+<br/><br/>
 <img src="docs/screenshot2.png" width="50%" alt="Farmer search view sample">
-
+<br/><br/>
 
 ### Prerequisites
 
@@ -27,6 +27,8 @@ You need to install docker and docker-compose.
 - Full documentation is available on [Docker's website](https://docs.docker.com/get-docker/).
 
 ### Installation
+
+Open your Terminal and follow the steps below:
 
 1. Clone the repo
 ```sh
