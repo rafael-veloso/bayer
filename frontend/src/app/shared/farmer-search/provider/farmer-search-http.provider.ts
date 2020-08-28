@@ -15,23 +15,7 @@ export class FarmerSearchHttpProvider implements FarmerSearchAbstractProvider {
 
   searchFarmers(params: SearchParams): Promise<Farmer[]> {
     const parmasObj: any = params;
-    return this.http.get<Farmer[]>(this.apiContext, {params: parmasObj}).pipe(
-      map((farmers: any[]) => farmers.map((farmer: any) => {
-        return {
-          name: farmer.name,
-          document: {
-            documentNumber: farmer.document,
-            documentType: null
-          },
-          address: {
-            address: farmer.address,
-            country: null,
-            state: null,
-            street: null
-          }
-        } as Farmer;
-      }))
-    ).toPromise();
+    return this.http.get<Farmer[]>(this.apiContext, {params: parmasObj}).toPromise();
   }
 
 }

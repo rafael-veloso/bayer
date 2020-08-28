@@ -1,16 +1,21 @@
 'use strict';
 
-const db = require('../models');
-const Op = require('Sequelize').Op
+const models = require('../models');
+const Sequelize = require('Sequelize');
+const Op = Sequelize.Op;
 
 class FarmerService {
 
   static async find(nameOrDocument) {
     try {
-      return await db.Farmer.findAll({
+      return await models.Farmer.findAll({
         where: {
-          [Op.or]: [{name: {[Op.iLike]: `${nameOrDocument}%`}}, {document: {[Op.like]: `${nameOrDocument}%`}}]
-        }
+          [Op.or]: [
+            {name: {[Op.iLike]: `${nameOrDocument}%`}},
+            {'$document.documentNumber$': {[Op.iLike]: `${nameOrDocument}%`}}
+          ]
+        },
+        include: ["document", "address"]
       });
     } catch (error) {
       throw error;
