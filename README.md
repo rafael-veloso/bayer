@@ -57,7 +57,7 @@ docker-compose down
 
 After the containers are started you will see this line at your terminal from the frontend container: "Compiled successfully.".
 
-Warn: The frontend container can take more time to get started, make sure you see this line at the end.
+<b>Warning:</b> The frontend container can take more time to get started, make sure you see this line at the end.
 
 <img src="docs/screenshot3.png" width="50%" alt="Farmer search view sample">
 
