@@ -2,7 +2,7 @@ version: '2'
 
 services:
   tc-frontend:
-    image: node:12-alpine
+    image: node:10-alpine
     working_dir: /app
     ports:
       - "4200:4200"
@@ -11,7 +11,7 @@ services:
     command: "npm run start:docker"
 
   tc-backend:
-    image: node:12-alpine
+    image: node:10-alpine
     working_dir: /app
     ports:
       - "8080:8080"
