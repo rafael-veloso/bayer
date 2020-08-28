@@ -55,7 +55,12 @@ docker-compose down
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-After the containers are started you will see this line at your terminal from the frontend container: "Compiled successfully.",
+After the containers are started you will see this line at your terminal from the frontend container: "Compiled successfully.".
 
-then you can access the [Frontend](http://localhost:4200) local URL from your Browser.
+Warn: The frontend container can take more time to get started, make sure you see this line at the end.
+
+<img src="docs/screenshot3.png" width="50%" alt="Farmer search view sample">
+
+
+Then you can access the [Frontend](http://localhost:4200) local URL from your Browser.
 You can access directly the [Backend](http://localhost:8080) as well if you want to test just the services.
