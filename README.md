@@ -12,7 +12,13 @@
 
 This is an example application using Angular 7, Material, NodeJs, Express and PostegreSQL.
 
-To get a local copy up and running follow these simple steps.
+When the containers are running you will be able to see the views shown below.
+
+
+<img src="docs/screenshot1.png" width="50%" alt="Home view">
+
+<img src="docs/screenshot2.png" width="50%" alt="Farmer search view sample">
+
 
 ### Prerequisites
 
