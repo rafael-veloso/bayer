@@ -5,10 +5,6 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
 
   class Farmer extends Model {
-    static associate(models) {
-      this.hasOne(models.Document, {foreignKey: 'farmerId', as: 'document'});
-      this.hasOne(models.Address, {foreignKey: 'farmerId', as: 'address'});
-    }
   };
 
   Farmer.init({
@@ -17,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Farmer',
   });
+  Farmer.associate = function(models) {
+    const foreignKey = 'farmerId'
+    this.hasOne(models.Document, {foreignKey, as: 'document'});
+    this.hasOne(models.Address, {foreignKey, as: 'address'});
+  }
   
   return Farmer;
 };

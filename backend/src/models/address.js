@@ -1,13 +1,12 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+
+const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
+
   class Address extends Model {
-    static associate(models) {
-      this.belongsTo(models.Farmer, {foreignKey: 'farmerId'});
-    }
   };
+
   Address.init({
     street: DataTypes.STRING,
     state: DataTypes.STRING,
@@ -15,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     country: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Address',
+    modelName: 'Address'
   });
   return Address;
 };
