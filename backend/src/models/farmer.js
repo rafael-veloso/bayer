@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
   }, {
     sequelize,
-    modelName: 'Farmer',
+    modelName: 'Farmer'
   });
   Farmer.associate = function(models) {
     const foreignKey = 'farmerId'
