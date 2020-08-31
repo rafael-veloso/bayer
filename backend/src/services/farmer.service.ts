@@ -1,7 +1,7 @@
 import models from '../models';
 const Op = models.Sequelize.Op;
 
-export default class FarmerService {
+export class FarmerService {
 
   static async find(nameOrDocument: any) {
     try {

@@ -1,0 +1,11 @@
+{
+  "exec": "node --inspect=0.0.0.0:9229 -r ts-node/register ./src/index.ts",
+	"ignore": [
+		"node_modules",
+		"**/*.d.ts",
+		"*.test.ts",
+		"*.spec.ts"
+	],
+	"watch": ["./src"],
+	"ext": "ts"
+}
