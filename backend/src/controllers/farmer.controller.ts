@@ -1,13 +1,13 @@
 'use strict';
 
-const express = require('express');
-const FarmerService = require('../services/farmer.service');
+import express from 'express';
+import FarmerService from '../services/farmer.service';
 
 const router = express.Router();
 
 class FarmerController {
 
-  static async find(req, res) {
+  static async find(req: express.Request, res: express.Response) {
     try {
       const result = await FarmerService.find(req.query.nameOrDocument)
       res.status(200).send(result);
@@ -20,4 +20,4 @@ class FarmerController {
 
 router.get('/', FarmerController.find);
 
-module.exports = router;
+export default router;

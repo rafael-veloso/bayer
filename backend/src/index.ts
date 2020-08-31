@@ -1,9 +1,9 @@
 'use strict';
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const farmRoute = require('./controllers/farmer.controller');
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import farmRoute from './controllers/farmer.controller';
 
 const app = express();
 app.use(bodyParser.json());

@@ -1,8 +1,8 @@
 'use strict';
 
-const { Model } = require('sequelize');
+import { Model, Sequelize, DataTypes } from "sequelize";
 
-module.exports = (sequelize, DataTypes) => {
+export default (sequelize: Sequelize) => {
 
   class Address extends Model {
   };

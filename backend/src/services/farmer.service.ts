@@ -1,11 +1,11 @@
 'use strict';
 
-const models = require('../models');
+import models from '../models';
 const Op = models.Sequelize.Op;
 
-class FarmerService {
+export default class FarmerService {
 
-  static async find(nameOrDocument) {
+  static async find(nameOrDocument: any) {
     try {
       return await models.Farmer.findAll({
         where: {
@@ -22,5 +22,3 @@ class FarmerService {
   }
 
 }
-
-module.exports = FarmerService;
