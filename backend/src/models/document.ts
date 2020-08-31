@@ -1,5 +1,3 @@
-'use strict';
-
 import { Model, Sequelize, DataTypes } from "sequelize";
 
 export default (sequelize: Sequelize) => {

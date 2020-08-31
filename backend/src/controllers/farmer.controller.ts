@@ -1,5 +1,3 @@
-'use strict';
-
 import express from 'express';
 import FarmerService from '../services/farmer.service';
 
